@@ -1,0 +1,205 @@
+[20:33:42][PluginLoader][INFO] No plugins found.
+[20:33:42][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[20:33:42][NATTCore][INFO] Working directory path: C:\Users\minks\Documents\UTB\ZS\AP5VS\ukol4\im-server-main
+[20:33:42][NATTCore][INFO] Start loading of the configuration file ...
+[20:33:43][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads)
+[20:33:43][NATTCore][INFO] Configuration loading done
+[20:33:43][NATTCore][INFO] Start building test structure according to the configuration ...
+[20:33:43][NATTCore][INFO] Test structure ...
+[20:33:43][NATTCore][INFO] Test structure building done
+[20:33:43][NATTCore][INFO] Start test executing ...
+[20:33:43][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[20:33:43][NATTCore][INFO] Starts execution on the root keyword  ...
+[20:33:43][MessageBuffer][INFO] Message buffer created for module with name: default
+[20:33:43][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 10
+[20:33:43][ProcessManager][INFO] New PID (20328) added to file
+[20:33:43][WaitKw][INFO] Waiting: 3000 ms
+[20:33:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'IM server listening on port 9999, maximum nr. of connections=10...'
+[20:33:46][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[20:33:46][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[20:33:46][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[20:33:46][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[20:33:46][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[20:33:46][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[20:33:46][WaitKw][INFO] Waiting: 2000 ms
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: ''
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: ''
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: ''
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'You are connected from /127.0.0.1:51061'
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'You are connected from /127.0.0.1:51060'
+[20:33:46][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'You are connected from /127.0.0.1:51059'
+[20:33:48][TelnetClient][INFO] (client-1) Message send: Klient1
+[20:33:48][TelnetClient][INFO] (client-2) Message send: Klient2
+[20:33:48][TelnetClient][INFO] (client-3) Message send: Klient3
+[20:33:48][WaitKw][INFO] Waiting: 800 ms
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51059: Klient1'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51060: Klient2'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51061: Klient3'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'From client /127.0.0.1:51060: Klient2'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51059: Klient1'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'From client /127.0.0.1:51059: Klient1'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'From client /127.0.0.1:51061: Klient3'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51060: Klient2'
+[20:33:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'From client /127.0.0.1:51061: Klient3'
+[20:33:49][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 1' starts executing now
+[20:33:49][TelnetClient][INFO] (client-1) Message send: Hello, world!
+[20:33:49][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51059: Hello, world!'
+[20:33:49][WaitKw][INFO] Waiting: 1000 ms
+[20:33:49][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'From client /127.0.0.1:51059: Hello, world!'
+[20:33:49][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51059: Hello, world!'
+[20:33:50][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51059: Hello, world!' must contains expected text '[Klient1] >> Hello, world!')
+[20:33:50][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51059: Hello, world!' must contains expected text '[Klient1] >> Hello, world!')
+[20:33:50][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 1' failed
+[20:33:50][MessageBuffer][INFO] Message buffer cleared
+[20:33:51][TestSuiteKw][INFO] Test case 'Zaklaní test komunikace 2' starts executing now
+[20:33:51][TelnetClient][INFO] (client-1) Message send: Testing 123
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51059: Testing 123'
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'From client /127.0.0.1:51059: Testing 123'
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51059: Testing 123'
+[20:33:51][TelnetClient][INFO] (client-2) Message send: 12345 - 67890
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51060: 12345 - 67890'
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51060: 12345 - 67890'
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'From client /127.0.0.1:51060: 12345 - 67890'
+[20:33:51][TelnetClient][INFO] (client-3) Message send: This is a test message
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51061: This is a test message'
+[20:33:51][WaitKw][INFO] Waiting: 1000 ms
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'From client /127.0.0.1:51061: This is a test message'
+[20:33:51][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'From client /127.0.0.1:51061: This is a test message'
+[20:33:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[20:33:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must equals expected text '[Klient2] >> 12345 - 67890')
+[20:33:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[20:33:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient3] >> This is a test message')
+[20:33:52][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[20:33:52][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient1] >> Testing 123')
+[20:33:52][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Zaklaní test komunikace 2' failed
+[20:33:52][MessageBuffer][INFO] Message buffer cleared
+[20:33:52][TestSuiteKw][INFO] Test case 'Test odeslání soukromé zprávy' starts executing now
+[20:33:52][TelnetClient][INFO] (client-2) Message send: #sendPrivate Klient3 This is a private message
+[20:33:52][WaitKw][INFO] Waiting: 1000 ms
+[20:33:53][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 
+[20:33:53][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 
+[20:33:53][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable '' must contains expected text '[Klient2] >> This is a private message')
+[20:33:53][TestSuiteKw][ERROR] Test suite 'Testování běžné komunikace' - Test case 'Test odeslání soukromé zprávy' failed
+[20:33:54][MessageBuffer][INFO] Message buffer cleared
+[20:33:54][MessageBuffer][INFO] Message buffer cleared
+[20:33:54][TestSuiteKw][INFO] Test case 'Test vstoupení do diskuzní místnosti' starts executing now
+[20:33:54][TelnetClient][INFO] (client-1) Message send: #join MyGroup1
+[20:33:54][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51059: #join MyGroup1'
+[20:33:54][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'From client /127.0.0.1:51059: #join MyGroup1'
+[20:33:54][TelnetClient][INFO] (client-2) Message send: #join MyGroup1
+[20:33:54][WaitKw][INFO] Waiting: 1000 ms
+[20:33:55][TelnetClient][INFO] (client-1) Message send: #groups
+[20:33:55][WaitKw][INFO] Waiting: 1000 ms
+[20:33:56][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51061: This is a test message' must contains expected text 'MyGroup1')
+[20:33:56][TelnetClient][INFO] (client-1) Message send: #leave public
+[20:33:56][TelnetClient][INFO] (client-2) Message send: #leave public
+[20:33:56][WaitKw][INFO] Waiting: 1000 ms
+[20:33:57][TelnetClient][INFO] (client-1) Message send: #groups
+[20:33:57][WaitKw][INFO] Waiting: 1000 ms
+[20:33:58][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test vstoupení do diskuzní místnosti' failed
+[20:33:58][MessageBuffer][INFO] Message buffer cleared
+[20:33:59][TestSuiteKw][INFO] Test case 'Test komunikace v diskuzní místnosti' starts executing now
+[20:33:59][TelnetClient][INFO] (client-1) Message send: This is private message
+[20:33:59][WaitKw][INFO] Waiting: 1000 ms
+[20:34:00][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51061: This is a test message' must contains expected text 'This is private message')
+[20:34:00][TelnetClient][INFO] (client-3) Message send: #join MyGroup1
+[20:34:00][WaitKw][INFO] Waiting: 1000 ms
+[20:34:00][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'From client /127.0.0.1:51061: #join MyGroup1'
+[20:34:01][TelnetClient][INFO] (client-1) Message send: This is private message
+[20:34:01][WaitKw][INFO] Waiting: 1000 ms
+[20:34:02][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51059: #join MyGroup1' must contains expected text 'This is private message')
+[20:34:02][TestSuiteKw][ERROR] Test suite 'Testování diskuzních místností' - Test case 'Test komunikace v diskuzní místnosti' failed
+[20:34:02][MessageBuffer][INFO] Message buffer cleared
+[20:34:03][MessageBuffer][INFO] Message buffer cleared
+[20:34:03][TestSuiteKw][INFO] Test case 'Test změny jména' starts executing now
+[20:34:03][TelnetClient][INFO] (client-1) Message send: #setMyName NoveJmeno1
+[20:34:03][WaitKw][INFO] Waiting: 1000 ms
+[20:34:04][TelnetClient][INFO] (client-1) Message send: This is new message
+[20:34:04][WaitKw][INFO] Waiting: 1000 ms
+[20:34:05][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51061: This is a test message' must contains expected text '[NoveJmeno1] >> This is new message')
+[20:34:05][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny jména' failed
+[20:34:05][MessageBuffer][INFO] Message buffer cleared
+[20:34:05][TestSuiteKw][INFO] Test case 'Test změny na neunikátní jméno' starts executing now
+[20:34:05][TelnetClient][INFO] (client-1) Message send: #setMyName Klient2
+[20:34:05][WaitKw][INFO] Waiting: 1000 ms
+[20:34:06][TelnetClient][INFO] (client-1) Message send: This is new message
+[20:34:06][WaitKw][INFO] Waiting: 1000 ms
+[20:34:07][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'From client /127.0.0.1:51061: This is a test message' must contains expected text '[NoveJmeno1] >> This is new message')
+[20:34:07][TestSuiteKw][ERROR] Test suite 'Testování příkazu pro změnů jména' - Test case 'Test změny na neunikátní jméno' failed
+[20:34:08][MessageBuffer][INFO] Message buffer cleared
+[20:34:08][MessageBuffer][INFO] Message buffer cleared
+[20:34:08][MessageBuffer][INFO] Message buffer cleared
+[20:34:08][ExternalProgramRunner][INFO] (default) Termiting external application
+[20:34:08][TelnetClient][WARNING] (client-3) Connection closed
+[20:34:08][TelnetClient][WARNING] (client-2) Connection closed
+[20:34:08][TelnetClient][WARNING] (client-1) Connection closed
+[20:34:08][ProcessManager][INFO] PID (20328) removed from file
+[20:34:08][ProcessManager][INFO] PID (20328) removed from file
+[20:34:08][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[20:34:08][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[20:34:08][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[20:34:08][NATTCore][INFO] Test executing finished
+[20:34:08][NATTCore][INFO] Start generating test report
+[20:34:08][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[20:34:08][ExternalProgramRunner][WARNING] (default) Error message from external application: DBG>Output handler starting for /127.0.0.1:51060
+DBG>Output handler starting for /127.0.0.1:51061
+DBG>Input handler starting for /127.0.0.1:51059
+DBG>Input handler starting for /127.0.0.1:51060
+DBG>Input handler starting for /127.0.0.1:51061
+DBG>Output handler starting for /127.0.0.1:51059
+DBG>Input handler running for /127.0.0.1:51061
+DBG>Input handler running for /127.0.0.1:51059
+DBG>Output handler running for /127.0.0.1:51059
+DBG>Output handler running for /127.0.0.1:51060
+DBG>Input handler running for /127.0.0.1:51060
+DBG>Output handler running for /127.0.0.1:51061
+DBG>Message sent to /127.0.0.1:51059:From client /127.0.0.1:51060: Klient2
+
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51059: Klient1
+
+DBG>Message sent to /127.0.0.1:51060:From client /127.0.0.1:51059: Klient1
+
+DBG>Message sent to /127.0.0.1:51059:From client /127.0.0.1:51061: Klient3
+
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51060: Klient2
+
+DBG>Message sent to /127.0.0.1:51060:From client /127.0.0.1:51061: Klient3
+
+DBG>Message sent to /127.0.0.1:51060:From client /127.0.0.1:51059: Hello, world!
+
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51059: Hello, world!
+
+DBG>Message sent to /127.0.0.1:51060:From client /127.0.0.1:51059: Testing 123
+
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51059: Testing 123
+
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51060: 12345 - 67890
+
+DBG>Message sent to /127.0.0.1:51059:From client /127.0.0.1:51060: 12345 - 67890
+
+DBG>Message sent to /127.0.0.1:51060:From client /127.0.0.1:51061: This is a test message
+
+DBG>Message sent to /127.0.0.1:51059:From client /127.0.0.1:51061: This is a test message
+
+Exception in thread "pool-1-thread-3" java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "handler.username" is null
+	at utb.fai.ActiveHandlers.sendPrivateMessage(ActiveHandlers.java:35)
+	at utb.fai.SocketHandler$InputHandler.run(SocketHandler.java:119)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+DBG>Message sent to /127.0.0.1:51061:From client /127.0.0.1:51059: #join MyGroup1
+
+Exception in thread "pool-1-thread-1" java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "handler.username" is null
+	at utb.fai.ActiveHandlers.sendPrivateMessage(ActiveHandlers.java:35)
+	at utb.fai.SocketHandler$InputHandler.run(SocketHandler.java:123)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+[20:34:08][TestReportGenerator][INFO] Report saved to file
+[20:34:08][NATTCore][WARNING] Failed test cases: "Zaklaní test komunikace 1", "Zaklaní test komunikace 2", "Test odeslání soukromé zprávy", "Test vstoupení do diskuzní místnosti", "Test komunikace v diskuzní místnosti", "Test změny jména", "Test změny na neunikátní jméno"
+[20:34:08][NATTCore][INFO] Final score: 0.000000
+[20:34:08][NATTCore][ERROR] Testing done. Leaving status: FAILED
