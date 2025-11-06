@@ -63,8 +63,13 @@ jobs:
         name: app-libs
         path: app/build/libs
 
+    - name: Download config file
+      run: |
+        mkdir -p config
+        curl -L -o config/test-config-4.yaml "https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads"
+
     - name: Run black box tests
-      run: java -jar NATT.jar -c "https://gitlab.com/ap5vs/test-config/im-server-config/-/raw/main/test-config-4.yaml?ref_type=heads"
+      run: java -jar NATT.jar -c config/test-config-4.yaml
 
     - name: Save test report
       if: success()
